@@ -1,15 +1,14 @@
 <?php
 
 
-Route::get('/', function () {
+Route::get('tasks', function () {
+    $tasks = DB::table('tasks')->get();
 
-    // Creiamo i dati
-    $tasks = [
-        'ripassa OOP',
-        'vedi documentazione Laravel',
-        'continua con il progetto'
-    ];
+    return view('tasks.index', compact('tasks'));
+});
 
-    // Passiamo i dati alla view
-    return view('welcome', compact('tasks'));
+Route::get('tasks/{task}', function ($id) {
+    $task = DB::table('tasks')->find($id);
+
+    return view('tasks.show', compact('task'));
 });
