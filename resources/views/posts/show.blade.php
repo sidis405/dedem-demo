@@ -2,8 +2,8 @@
 
 @section('content')
 
-<p>
+<div class="col-sm-8 blog-main">
     Il contenuto del post
-</p>
+</div>
 
 @stop

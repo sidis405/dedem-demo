@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="icon" href="../../favicon.ico">
         <title>Il mio blog</title>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
         <link href="/css/blog.css" rel="stylesheet">
@@ -14,9 +13,8 @@
         @include('layouts.nav')
         <div class="container">
             <div class="row">
-                <div class="col-sm-8 blog-main">
-                    @yield('content')
-                </div>
+                @yield('content')
+
                 @include('layouts.sidebar')
             </div>
         </div>
